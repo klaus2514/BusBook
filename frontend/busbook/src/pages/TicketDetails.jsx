@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "../styles/ticketDetails.css";
+import "../styles/TicketDetails.css";
 
 const TicketDetails = () => {
   const { state } = useLocation();
