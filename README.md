@@ -44,7 +44,7 @@ cd BusBook
 Setup Backend-
 cd backend
 npm install
-npm nodemon server.js
+nodemon/node server.js
 
 create .env in backend-
 MONGO_URI=your_mongodb_connection_string
