@@ -1,0 +1,365 @@
+/* Base Styles */
+.my-buses-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+}
+
+.stats-badge {
+  background-color: #4299e1;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+}
+
+.loading-spinner {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #4299e1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: #e53e3e;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+.retry-btn {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-btn:hover {
+  background-color: #3182ce;
+  transform: translateY(-1px);
+}
+
+/* Empty State */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+  color: #718096;
+  max-width: 500px;
+}
+
+/* Buses Grid */
+.buses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Bus Card */
+.bus-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.bus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.bus-header {
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.bus-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.bus-icon {
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.bus-meta {
+  display: flex;
+  align-items: center;
+  margin-top: 0.75rem;
+  gap: 0.75rem;
+}
+
+.seats-badge {
+  background-color: #ebf8ff;
+  color: #3182ce;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.schedules-count {
+  color: #718096;
+  font-size: 0.9rem;
+}
+
+/* Schedules Container */
+.schedules-container {
+  padding: 1.5rem;
+}
+
+/* Update these styles in your MyBuses.css */
+
+/* Schedule Card Container */
+.schedule-card {
+  background-color: #f7fafc;
+  border-radius: 8px;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #e2e8f0;
+  position: relative; /* For absolute positioning of price */
+}
+
+/* Route Information Section */
+.route-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Changed from center to prevent squeezing */
+  margin-bottom: 1rem;
+  gap: 1rem; /* Added gap for better spacing */
+}
+
+.route-path {
+  display: flex;
+  flex-direction: column; /* Stack route info vertically */
+  flex-grow: 1; /* Take available space */
+}
+
+.route-from-to {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.route-from, .route-to {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.route-arrow {
+  margin: 0 0.5rem;
+  color: #a0aec0;
+  font-size: 1.1rem;
+}
+
+/* Price Tag - Moved to top right */
+.price-tag {
+  background-color: #48bb78;
+  color: white;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Timing Information */
+.timing-info {
+  margin-bottom: 0.75rem;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.timing-group {
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.timing-label {
+  color: #718096;
+  min-width: 80px;
+  font-weight: 500;
+}
+
+.timing-value {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Availability Section */
+.availability-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+}
+
+.seats-available {
+  color: #4a5568;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status.available {
+  background-color: #f0fff4;
+  color: #38a169;
+}
+
+.status.full {
+  background-color: #fff5f5;
+  color: #e53e3e;
+}
+
+.no-schedules {
+  padding: 1.5rem;
+  text-align: center;
+  color: #a0aec0;
+  font-style: italic;
+}
+
+/* Card Footer */
+.card-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #edf2f7;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.delete-btn {
+  background-color: #fff5f5;
+  color: #e53e3e;
+  border: 1px solid #fed7d7;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #fed7d7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .my-buses-container {
+    padding: 1.5rem;
+  }
+  
+  .buses-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .bus-header {
+    padding: 1rem;
+  }
+  
+  .schedules-container {
+    padding: 1rem;
+  }
+}

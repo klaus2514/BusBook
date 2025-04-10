@@ -1,0 +1,197 @@
+/* Create Bus Container */
+.create-bus-container {
+  min-height: 100vh;
+  background: linear-gradient(rgba(106, 13, 173, 0.7), rgba(233, 30, 99, 0.7)),
+              url('/background.jpg') center/cover no-repeat;
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Glass Effect Form Container */
+.create-bus-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 64rem; /* matches max-w-4xl */
+  margin: 0 auto;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+.create-bus-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+/* Form Styling */
+.create-bus-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Bus Details Section */
+.bus-details {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Schedule Section */
+.schedule-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.schedule-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.schedule-card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Groups */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.input-label {
+  color: var(--deep-purple);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.create-bus-input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transition: all 0.3s;
+  color: var(--dark-text);
+}
+
+.create-bus-input:focus {
+  outline: none;
+  background: var(--white);
+  box-shadow: 0 0 0 2px rgba(233, 30, 99, 0.5);
+}
+
+/* Buttons */
+.add-schedule-btn {
+  padding: 0.8rem 1.5rem;
+  background: var(--light-purple);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.add-schedule-btn:hover {
+  background: #8e24aa;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.remove-schedule-btn {
+  padding: 0.5rem 1rem;
+  background: #ef5350;
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.remove-schedule-btn:hover {
+  background: #e53935;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn {
+  padding: 1rem 2rem;
+  background: var(--pink);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #d81b60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-bus-glass {
+    padding: 1.5rem;
+  }
+
+  .create-bus-title {
+    font-size: 1.8rem;
+  }
+
+  .submit-btn {
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .create-bus-container {
+    padding: 1rem;
+  }
+
+  .create-bus-input {
+    padding: 0.8rem;
+  }
+
+  .add-schedule-btn {
+    padding: 0.6rem 1rem;
+  }
+}

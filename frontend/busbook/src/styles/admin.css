@@ -1,0 +1,60 @@
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 5rem auto 2rem auto; /* Added top margin for navbar */
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center text */
+}
+
+.admin-dashboard h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tabs button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tabs button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.content {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Center content */
+  padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    margin: 4rem auto 1rem auto;
+    padding: 1rem;
+  }
+  .tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+}

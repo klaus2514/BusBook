@@ -1,0 +1,331 @@
+/* Base Styles */
+.travel-about {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-text);
+    background-color: var(--off-white);
+  }
+  
+  /* Hero Section */
+  .about-hero {
+    min-height: 60vh;
+    background: 
+      linear-gradient(135deg, rgba(106, 13, 173, 0.7) 0%, rgba(156, 39, 176, 0.7) 50%, rgba(233, 30, 99, 0.7) 100%),
+      url('/about-bus.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 2rem;
+    position: relative;
+  }
+  
+  .about-hero-content h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+  }
+  
+  .about-hero-content h1 span {
+    color: var(--pink);
+    font-weight: 700;
+  }
+  
+  .about-hero-content p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Glass Morphism Effect */
+  .about-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Main Content */
+  .about-content {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .about-glass h2 {
+    font-size: 2rem;
+    color: var(--deep-purple);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .about-glass h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--pink);
+  }
+  
+  .about-glass p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Features Grid */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+  
+  .feature-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card h3 {
+    font-size: 1.3rem;
+    color: var(--deep-purple);
+    margin-bottom: 1rem;
+  }
+  
+  .feature-card p {
+    font-size: 1rem;
+    color: var(--dark-text);
+    margin: 0;
+  }
+  
+  /* Stats Section */
+  .about-stats {
+    padding: 5rem 2rem;
+    background: 
+      linear-gradient(135deg, rgba(106, 13, 173, 0.7) 0%, rgba(156, 39, 176, 0.7) 50%, rgba(233, 30, 99, 0.7) 100%),
+      url('/stats-bg.jpg') center/cover no-repeat;
+    color: var(--white);
+  }
+  
+  .stats-glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .stats-glass h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+  }
+  
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  
+  .stat-item {
+    text-align: center;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+    margin: 0 0 0.5rem;
+    color: var(--white);
+  }
+  
+  .stat-item p {
+    font-size: 1rem;
+    margin: 0;
+    opacity: 0.9;
+  }
+  
+  /* Contact Section */
+.about-contact {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .contact-glass {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 2.5rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-glass h2 {
+    font-size: 2rem;
+    color: var(--deep-purple);
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .contact-glass h2::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--pink);
+  }
+  
+  .contact-glass p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-text);
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .email-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(233, 30, 99, 0.8);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+  }
+  
+  .email-button:hover {
+    background: rgba(233, 30, 99, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .email-button svg {
+    flex-shrink: 0;
+  }
+  
+  .contact-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 600;
+    color: var(--deep-purple);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 576px) {
+    .contact-glass {
+      padding: 1.5rem;
+    }
+    
+    .contact-glass h2 {
+      font-size: 1.8rem;
+    }
+    
+    .contact-glass p {
+      font-size: 1rem;
+    }
+    
+    .email-button,
+    .contact-phone {
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-hero-content h1 {
+      font-size: 2.5rem;
+      letter-spacing: 0.2rem;
+    }
+    
+    .about-hero-content p {
+      font-size: 1.2rem;
+    }
+    
+    .about-glass {
+      padding: 1.5rem;
+    }
+    
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .contact-glass {
+      padding: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-hero-content h1 {
+      font-size: 2rem;
+    }
+    
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-glass h2 {
+      font-size: 1.8rem;
+    }
+    
+    .contact-glass p {
+      font-size: 1rem;
+    }
+  }

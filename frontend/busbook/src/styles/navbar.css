@@ -1,0 +1,233 @@
+/* Glass Morphism Navbar */
+.glass-navbar {
+  background: rgba(106, 13, 173, 0.3); /* Purple with transparency */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+
+.glass-navbar:hover {
+  background: rgba(106, 13, 173, 0.5);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.nav-logo:hover {
+  color: #ff9e9e;
+}
+
+/* Search Styles */
+.nav-search {
+  position: relative;
+  flex-grow: 1;
+  margin: 0 2rem;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #e91e63;
+  background: white;
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-item {
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #333;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search-item:hover {
+  background: rgba(106, 13, 173, 0.1);
+  color: #6a0dad;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: 1rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  position: relative;
+  font-size: 1.1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+}
+
+.nav-link:hover {
+  color: #ff9e9e;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e91e63;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-button {
+  background: rgba(233, 30, 99, 0.8);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+  font-size: 1rem;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button:hover {
+  background: rgba(216, 27, 96, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styles */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  height: 50px; /* Fixed height for navbar */
+}
+
+.logo-image {
+  height: 40px; /* Reduced from original */
+  width: 40px; /* Makes it square */
+  border-radius: 50%; /* Makes it round */
+  object-fit: cover; /* Ensures image fills circle */
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Optional: subtle border */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: subtle shadow */
+}
+
+.logo-image:hover {
+  transform: scale(1.05); /* Slight grow on hover */
+  border-color: rgba(255, 255, 255, 0.6); /* Optional: border highlight */
+}
+
+/* Adjust nav-container to prevent logo from taking too much space */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Added padding */
+  gap: 1rem; /* Space between logo and other elements */
+}
+
+.logo-text {
+  margin-left: 10px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-search {
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .glass-navbar {
+    padding: 0.8rem 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  .nav-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+}

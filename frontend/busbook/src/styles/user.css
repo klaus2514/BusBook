@@ -1,0 +1,315 @@
+/* Dashboard Styles */
+.travel-dashboard {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  min-height: 100vh;
+  padding-top: 80px; /* Account for fixed navbar */
+}
+
+.travel-dashboard-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Search Container */
+.travel-search-container {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px rgba(106, 13, 173, 0.1);
+}
+
+.travel-search-title {
+  color: #6a0dad;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.travel-search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-input-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.travel-input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-input-label {
+  color: #6a0dad;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.travel-input {
+  padding: 0.8rem 1rem;
+  border: 2px solid rgba(106, 13, 173, 0.2);
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.travel-input:focus {
+  outline: none;
+  border-color: #9c27b0;
+  box-shadow: 0 0 0 3px rgba(156, 39, 176, 0.2);
+}
+
+.travel-search-btn {
+  background: linear-gradient(135deg, #6a0dad 0%, #9c27b0 100%);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  grid-column: 1 / -1;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.travel-search-btn:hover {
+  background: linear-gradient(135deg, #5a0b9d 0%, #8c1da0 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+}
+
+.travel-search-btn:disabled {
+  background: #cccccc;
+  transform: none;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.travel-error-message {
+  background: rgba(233, 30, 99, 0.1);
+  color: #e91e63;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.travel-error-icon {
+  font-size: 1.2rem;
+}
+
+/* Bus Grid */
+.travel-bus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+/* Bus Card */
+.travel-bus-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(106, 13, 173, 0.1);
+  transition: all 0.3s;
+}
+
+.travel-bus-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(106, 13, 173, 0.2);
+}
+
+.travel-bus-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, rgba(106, 13, 173, 0.1) 0%, rgba(156, 39, 176, 0.1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.travel-bus-name {
+  color: #6a0dad;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.travel-bus-availability {
+  background: rgba(106, 13, 173, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+}
+
+.travel-seats-available {
+  color: #6a0dad;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* Route Visualization */
+.travel-bus-route {
+  padding: 1.5rem;
+  position: relative;
+}
+
+.travel-route-point {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.travel-route-marker {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.travel-route-marker.departure {
+  background: #6a0dad;
+}
+
+.travel-route-marker.arrival {
+  background: #e91e63;
+}
+
+.travel-route-line {
+  position: absolute;
+  left: 36px;
+  top: 36px;
+  bottom: 36px;
+  width: 2px;
+  background: rgba(106, 13, 173, 0.2);
+  z-index: 1;
+}
+
+.travel-route-city {
+  font-size: 1rem;
+  color: #333;
+  margin: 0 0 0.25rem 0;
+  font-weight: 500;
+}
+
+.travel-route-time {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Bus Footer */
+.travel-bus-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid rgba(106, 13, 173, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.travel-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.travel-price-label {
+  font-size: 0.75rem;
+  color: #9c27b0;
+}
+
+.travel-price-value {
+  font-size: 1.5rem;
+  color: #6a0dad;
+  font-weight: 700;
+}
+
+.travel-book-btn {
+  background: linear-gradient(135deg, #6a0dad 0%, #9c27b0 100%);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.travel-book-btn:hover {
+  background: linear-gradient(135deg, #5a0b9d 0%, #8c1da0 100%);
+  box-shadow: 0 5px 15px rgba(106, 13, 173, 0.3);
+}
+
+/* Loading State */
+.travel-loading-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.travel-spinner-large {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(106, 13, 173, 0.2);
+  border-radius: 50%;
+  border-top-color: #6a0dad;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+/* Empty State */
+.travel-empty-state {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(106, 13, 173, 0.05);
+  border-radius: 12px;
+}
+
+.travel-empty-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.travel-empty-state h3 {
+  color: #6a0dad;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .travel-dashboard {
+    padding-top: 70px;
+  }
+  
+  .travel-dashboard-container {
+    padding: 1rem;
+  }
+  
+  .travel-search-container {
+    padding: 1.5rem;
+  }
+  
+  .travel-input-group {
+    grid-template-columns: 1fr;
+  }
+  
+  .travel-bus-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
