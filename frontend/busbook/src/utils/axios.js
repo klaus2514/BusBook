@@ -1,8 +1,9 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'http://localhost:5000', // Ensure this matches your backend
+  baseURL: import.meta.env.VITE_API_BASE_URL, // use env variable
 });
+
 
 // Add this interceptor to attach the token
 instance.interceptors.request.use((config) => {
