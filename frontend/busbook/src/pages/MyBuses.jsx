@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../utils/axios";
 import { toast } from "react-toastify"; // Added missing import
-import "../styles/MyBuses.css";
+import "../styles/myBuses.css";
 
 const MyBuses = () => {
   const [buses, setBuses] = useState([]);
